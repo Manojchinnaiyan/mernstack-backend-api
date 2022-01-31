@@ -17,10 +17,10 @@ app.use( '/', ( req, res ) =>
     res.send("Hello to API")
 })
 
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
 mongoose.connect( process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true } )
-    .then( () => app.listen( PORT, () => console.log( `Server is running on port :${ PORT }` ) ) )
+    .then( () => app.listen( port, () => console.log( `Server is running on port :${ PORT }` ) ) )
     .catch( ( error ) => console.log( error.message ) )
     
 
